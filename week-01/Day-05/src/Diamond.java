@@ -1,7 +1,7 @@
 public class Diamond {
     public static void main(String[] args) {
 
-/*        int star = 5;
+        /*int star = 5;
 
         for (int i = 0; i < star; i++) {
             if (star % 3 == 0) {
@@ -23,10 +23,11 @@ public class Diamond {
                     System.out.println();
                 }
             }
-        }*/
+        }
 
 
-   /*     int num = 7;
+
+     int num = 7;
         if (num%2!=0){
             for (int i = 0; i < num; i++) {
                 System.out.print(" ");
@@ -39,10 +40,11 @@ public class Diamond {
                 }
 
                 System.out.println();
-            }*/
+            }
 
 
-   /*     int i,j,r;
+
+     int i,j,r;
 
         r = 7;
         if (r%2 != 0) {
@@ -52,9 +54,10 @@ public class Diamond {
                 for (j = 1; j <= i - 1; j++)
                     System.out.print("*");
                 System.out.print("\n");
-            }*/
+            }
 
-/*        int rows = 7;
+
+        int rows = 7;
 
         if (rows%2 != 0){
 
@@ -71,10 +74,11 @@ public class Diamond {
             }
             System.out.println();
 
-        }*/
+        }
 
 
- /*       int i, j, r;
+
+       int i, j, r;
 
         r = 5;
         for (i = 0; i <= r; i++) {
@@ -90,7 +94,8 @@ public class Diamond {
                 System.out.print(" ");
             for (j = 1; j <= 2*i - 1; j++)
                 System.out.print("*");
-            System.out.println();*/
+            System.out.println();
+
 
 
         int i, j, r;
@@ -109,8 +114,10 @@ public class Diamond {
                 System.out.print(" ");
             for (j = 1; j <= 2*i - 1; j++)
                 System.out.print("*");
-            System.out.println();
-        }
+            System.out.println();*/
+
+
+
+
     }
 }
-
