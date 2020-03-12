@@ -1,40 +1,27 @@
 import javax.swing.*;
 
 import java.awt.*;
+import java.util.Map;
 
 import static javax.swing.JFrame.EXIT_ON_CLOSE;
 
-public class Diagonals {
+public class HorizontalLines {
     public static void mainDraw(Graphics graphics) {
-        // Draw the canvas' diagonals.
-        // If it starts from the upper-left corner it should be green, otherwise it should be red.
+        // Create a function that draws a single line and takes 3 parameters:
+        // The x and y coordinates of the line's starting point and the graphics
+        // and draws a 50 long horizontal line from that point.
+        // Draw at least 3 lines with that function using a loop.
 
-        graphics.setColor(Color.BLACK);
-        graphics.drawLine(0,0, WIDTH,HEIGHT);
+        for (int i = 0; i < 50; i++) {
+            int x = (int) ((Math.random() * WIDTH));
+            int y = (int) ((Math.random()) * HEIGHT);
+            drawHorizontalLines(x,y,graphics);
+        }
 
-        graphics.setColor(Color.RED);
-        graphics.drawLine(WIDTH/2,0,WIDTH/2,HEIGHT);
+    }
 
-        graphics.setColor(Color.BLUE);
-        graphics.drawLine(WIDTH, 0, 0,HEIGHT);
-
-        graphics.setColor(Color.MAGENTA);
-        graphics.drawLine(WIDTH,HEIGHT/2,0,HEIGHT/2);
-
-        graphics.setColor(Color.CYAN);
-        graphics.drawLine(WIDTH/2,HEIGHT,WIDTH/2,0);
-
-
-        graphics.setColor(Color.GREEN);
-        graphics.drawLine(0,HEIGHT,WIDTH,0);
-
-
-        graphics.setColor(Color.ORANGE);
-        graphics.drawLine(0,HEIGHT/2, WIDTH, HEIGHT/2);
-
-
-
-
+    public static void drawHorizontalLines (int x, int y , Graphics graphics){
+        graphics.drawLine(x, y, WIDTH , y);
 
     }
 
