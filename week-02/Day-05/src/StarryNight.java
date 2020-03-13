@@ -15,7 +15,7 @@ public class StarryNight {
         graphics.setColor(Color.black);
         graphics.fillRect(0,0,WIDTH,HEIGHT);
 
-        for (int i = 0; i < 20; i++) {
+        for (int i = 0; i < 50; i++) {
             int size = (int) (Math.random()*10);
             int x = (int) (Math.random()*WIDTH);
             int y = (int) (Math.random()*HEIGHT);

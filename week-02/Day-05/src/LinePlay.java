@@ -7,7 +7,7 @@ import static javax.swing.JFrame.EXIT_ON_CLOSE;
 public class LinePlay {
     public static void mainDraw(Graphics graphics) {
 
-        graphics.setColor(new Color(128,0,128));
+        /*graphics.setColor(new Color(128,0,128));
         int x = 40;
         int y = 0;
         int y2 = 20;
@@ -16,6 +16,18 @@ public class LinePlay {
             graphics.drawLine(x,y,WIDTH,y2);
             y2+=20;
 
+        }*/
+
+        graphics.setColor(Color.WHITE);
+        graphics.fillRect(0,0,WIDTH,HEIGHT);
+
+
+        int steps = 50;
+        for (int i = 1; i < steps; i++) {
+            graphics.setColor(new Color(50,205,50));
+            graphics.drawLine(0, i * WIDTH / steps, i * WIDTH / steps, WIDTH);
+            graphics.setColor(new Color(200,0,200));
+            graphics.drawLine(WIDTH, i * WIDTH / steps, i * WIDTH / steps, 0);
         }
 
     }
