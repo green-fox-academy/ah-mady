@@ -20,6 +20,7 @@ public class RainbowBoxFunction {
 
                 new Color(80, 70, 10),
                 new Color(100, 150, 200)));
+
         int size = (int) (Math.random() * WIDTH);
         for (int i = 0; i < colors.size(); i++) {
 
