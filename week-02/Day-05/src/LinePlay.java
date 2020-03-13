@@ -25,9 +25,9 @@ public class LinePlay {
         int steps = 50;
         for (int i = 1; i < steps; i++) {
             graphics.setColor(new Color(50,205,50));
-            graphics.drawLine(0, i * WIDTH / steps, i * WIDTH / steps, WIDTH);
+            graphics.drawLine(0, i * HEIGHT / steps, i * WIDTH / steps, HEIGHT);
             graphics.setColor(new Color(200,0,200));
-            graphics.drawLine(WIDTH, i * WIDTH / steps, i * WIDTH / steps, 0);
+            graphics.drawLine(WIDTH, i * HEIGHT / steps, i * WIDTH / steps, 0);
         }
 
     }
