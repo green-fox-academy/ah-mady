@@ -18,7 +18,9 @@ public class FunctionToCenter {
         int x = 0;
         int y = 0;
 
-        for (int i = 0; i < 17; i++) {
+
+/*        for (int i = 0; i <64 ; i++) {
+        for (int i = 0; i < (WIDTH/18); i++) {
             if (i == 16) {
                 for (int j = 0; j < 17; j++) {
                     drawLinesToCenter(x, y, graphics);
@@ -31,6 +33,7 @@ public class FunctionToCenter {
                                 for (int l = 0; l < 17; l++) {
 
                                     drawLinesToCenter(x, y, graphics);
+
                                     y -= 20;
                                 }
                             }
@@ -43,7 +46,25 @@ public class FunctionToCenter {
             drawLinesToCenter(x, y, graphics);
             x += 20;
             // y += 20;
+        }*/
+        for (int i = 0; i < 64; i++) {
+
+            if (i < 16) {
+                drawLinesToCenter(x, y, graphics);
+                x += 20;
+            } else if (i >= 16 && i < 32) {
+                drawLinesToCenter(x, y, graphics);
+                y += 20;
+            } else if (i >= 32 && i < 48) {
+                drawLinesToCenter(x, y, graphics);
+                x-=20;
+            } else {
+                drawLinesToCenter(x, y, graphics);
+                y-=20;
+            }
+
         }
+
     }
 
     public static void drawLinesToCenter(int x, int y, Graphics graphics) {
