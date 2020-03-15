@@ -19,7 +19,7 @@ public class FunctionToCenter {
         int y = 0;
 
 
-        /*for (int i = 0; i < (WIDTH / 18); i++) {
+  /*      for (int i = 0; i < (WIDTH / 18); i++) {
             if (i == 16) {
                 for (int j = 0; j < 17; j++) {
                     drawLinesToCenter(x, y, graphics);

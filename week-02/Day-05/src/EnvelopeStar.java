@@ -1,24 +1,28 @@
 import javax.swing.*;
-
 import java.awt.*;
 
-import static javax.swing.JFrame.EXIT_ON_CLOSE;
+import static java.awt.image.ImageObserver.HEIGHT;
+import static java.awt.image.ImageObserver.WIDTH;
+import static javax.swing.WindowConstants.EXIT_ON_CLOSE;
 
-public class LinePlay {
+public class EnvelopeStar {
     public static void mainDraw(Graphics graphics) {
 
-
         graphics.setColor(Color.WHITE);
-        graphics.fillRect(0,0,WIDTH,HEIGHT);
+        graphics.fillRect(0, 0, WIDTH, HEIGHT);
 
-
-        int steps = 10;
+        int steps = 20;
+        int patternWidth = WIDTH / 2;
         for (int i = 1; i < steps; i++) {
-            graphics.setColor(new Color(50,205,50));
-            graphics.drawLine(0, i * HEIGHT / steps, i * WIDTH / steps, HEIGHT);
-            graphics.setColor(new Color(200,0,200));
-            graphics.drawLine(WIDTH, i * HEIGHT / steps, i * WIDTH / steps, 0);
+            int distance = i * patternWidth / steps;
+            graphics.setColor(new Color(50, 205, 50));
+            graphics.drawLine(WIDTH/2, 0, WIDTH/2, HEIGHT);
+            graphics.drawLine(WIDTH / 2, WIDTH - distance, WIDTH / 2 + distance, HEIGHT / 2);
+            graphics.drawLine(WIDTH/2, WIDTH - distance, WIDTH / 2 - distance, HEIGHT/2);
+            graphics.drawLine(WIDTH/2, distance, WIDTH/2 - distance, WIDTH/2);
+            graphics.drawLine(WIDTH/2, WIDTH/2 - distance, WIDTH-distance, HEIGHT/2);
         }
+
 
     }
 

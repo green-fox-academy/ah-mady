@@ -31,14 +31,14 @@ public class WriteMultipleLines {
         return lines;
     }
 
-    public static void writeMultipleLines(String stringPath, String word, int number) {
+    public static void writeMultipleLines(String fileName, String word, int number) {
         List<String> content = new ArrayList<>();
         for (int i = 0; i < number; i++) {
             content.add(word);
             //System.out.println(word);
         }
         try {
-            Files.write(Paths.get(stringPath), content);
+            Files.write(Paths.get(fileName), content);
         } catch (IOException e) {
             System.out.println();
         }

@@ -20,9 +20,7 @@ public class DiagonalMatrix {
                 if (i == j) {
                     twoDimensionalArray[i][j] = 1;
                     //  System.out.print("1");
-                } else {
-                    twoDimensionalArray[i][j] = 0;
-                    // System.out.print("0");
+
                 }
             }
             // System.out.println();

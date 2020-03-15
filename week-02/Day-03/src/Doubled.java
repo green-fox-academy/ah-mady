@@ -2,55 +2,45 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.security.PublicKey;
+import java.util.ArrayList;
 import java.util.List;
+import java.io.*;
 
 public class Doubled {
-    public static void main(String[] args) {
 
-        Path str = Paths.get("duplicate-char.txt");
-        int n = str.getNameCount();
-        System.out.println(decryptString(str, n));
+    public static void main(String[] args) throws IOException {
+        // Create a method that decrypts the duplicated-chars.txt
 
-        decryptString("duplicate-char.txt", 2);
+        decryptChars();
+
+        //WITHOUT the special character
+        //tried adding UTF8 but no gain
 
 
 
     }
 
-    static String decryptString(Paths str, int n)
-    {
+    public static void decryptChars() {
+        try {
+            Path path = Paths.get("duplicate-char.txt");
+            List<String> oldLines = Files.readAllLines(path);
+            List<String> newLines = new ArrayList<>();
+            for (String line : oldLines) {
+                String newLine = "";
+                for (int i = 0; i < line.length()-1; i+=2) {
+                    newLine+=line.charAt(i);
+                    char special = '©';
 
-        // Initial jump will be 1
-        int i = 0, jump = 1;
-        String decryptedStr = "";
+                    if(line.charAt(i) != line.charAt(i+1) || line.charAt(i) == special) {
+                        newLine+=line.charAt(i+1);
+                    }
+                }
 
-        while (i < n)
-        {
-            decryptedStr += str.charAt(i);
-            i += jump;
-
-            // Increment jump by 1 with every character
-            jump++;
-            System.out.println(str);
+                newLines.add(newLine);
+            }
+            Files.write(Paths.get("decrypted-chars.txt"), newLines);
+        } catch (IOException e) {
+            System.out.println("IOException\n" + e);
         }
-
-        return decryptedStr;
     }
-
-    // Driver code
-   /* public static void main(String[] args)
-    {
-        String str = "geeeeekkkksssss";
-        int n = str.length();
-        System.out.println(decryptString(str, n));
-    }*/
-
- /*  public static List<Character> duplicateChars () throws IOException {
-       Path path = Paths.get("duplicate-char.txt");
-       List<String> word = Files.readAllLines(path);
-       for (int i = 0; i < duplicateChars().size(); i++) {
-           duplicateChars()
-       }
-   }*/
 }
