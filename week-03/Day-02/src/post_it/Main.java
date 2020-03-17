@@ -1,3 +1,5 @@
+package post_it;
+
 import java.awt.Color;
 
 public class Main {
