@@ -1,11 +1,7 @@
-package cohort;
+package GreenFoxOrganization;
 
-import java.security.PublicKey;
 import java.util.ArrayList;
 import java.util.List;
-import mentor.Mentor;
-import person.Person;
-import student.Student;
 
 public class Cohort{
 

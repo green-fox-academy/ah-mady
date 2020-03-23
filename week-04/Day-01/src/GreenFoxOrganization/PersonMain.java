@@ -1,10 +1,6 @@
-package person;
+package GreenFoxOrganization;
 
-import cohort.Cohort;
 import java.util.ArrayList;
-import mentor.Mentor;
-import sponsor.Sponsor;
-import student.Student;
 
 public class PersonMain {
   public static void main(String[] args) {

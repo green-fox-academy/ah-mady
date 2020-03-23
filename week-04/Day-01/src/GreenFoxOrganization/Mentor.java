@@ -1,6 +1,4 @@
-package mentor;
-
-import person.Person;
+package GreenFoxOrganization;
 
 public class Mentor extends Person {
 

@@ -1,4 +1,4 @@
-package person;
+package GreenFoxOrganization;
 
 public class Person {
 

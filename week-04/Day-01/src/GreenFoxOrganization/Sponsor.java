@@ -1,6 +1,6 @@
-package sponsor;
+package GreenFoxOrganization;
 
-import person.Person;
+import GreenFoxOrganization.Person;
 
 public class Sponsor extends Person {
 
