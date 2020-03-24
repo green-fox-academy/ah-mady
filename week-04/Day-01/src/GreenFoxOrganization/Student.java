@@ -1,8 +1,6 @@
 package GreenFoxOrganization;
 
-import GreenFoxOrganization.Person;
-
-public class Student extends Person {
+public class Student extends Person implements Cloneable {
 
   public String previousOrganization;
   public int skippedDays;
@@ -33,5 +31,11 @@ public class Student extends Person {
 
   public void skipDays(int numberOfDays) {
     skippedDays+=numberOfDays;
+  }
+
+  @Override
+  protected Object clone() throws CloneNotSupportedException {
+    Student copy = new Student(this.name,this.age,this.gender,previousOrganization);
+    return copy;
   }
 }

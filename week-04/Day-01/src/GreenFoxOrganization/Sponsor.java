@@ -2,7 +2,7 @@ package GreenFoxOrganization;
 
 import GreenFoxOrganization.Person;
 
-public class Sponsor extends Person {
+public class Sponsor extends Person implements Cloneable{
 
   public String company;
   int hiredStudents;
@@ -39,4 +39,9 @@ public class Sponsor extends Person {
     System.out.println(goal);
   }
 
+  @Override
+  protected Object clone() throws CloneNotSupportedException {
+    Sponsor copy = new Sponsor(this.name,this.age,this.gender,company);
+    return copy;
+  }
 }

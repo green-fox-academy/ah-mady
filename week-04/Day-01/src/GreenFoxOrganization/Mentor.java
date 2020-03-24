@@ -1,6 +1,6 @@
 package GreenFoxOrganization;
 
-public class Mentor extends Person {
+public class Mentor extends Person implements Cloneable {
 
   private String level;
  /* public enum level{
@@ -10,7 +10,7 @@ public class Mentor extends Person {
   }*/
 
 
-  public Mentor(){
+  public Mentor() {
     this.level = "intermediate";
   }
 
@@ -23,25 +23,30 @@ public class Mentor extends Person {
     return level;
   }*/
 
-  public Mentor (String name, int age, String gender, String level){
+  public Mentor(String name, int age, String gender, String level) {
     super(name, age, gender);
-    if (level.equals(null)){
-      this.level= "intermediate";
-    }else {
+    if (level.equals(null)) {
+      this.level = "intermediate";
+    } else {
       this.level = level;
     }
   }
 
 
   @Override
-  public void getGoal(){
+  public void getGoal() {
     System.out.println("My goal is: Educate brilliant junior software developers.");
   }
 
   @Override
-  public void introduce(){
+  public void introduce() {
     System.out.println("Hi, I'm " + name + ", a " + age + " years old " + gender + " "
         + level + " mentor.");
   }
 
+  @Override
+  protected Object clone() throws CloneNotSupportedException {
+    Mentor copy = new Mentor(this.name,this.age,this.gender,level);
+    return copy;
+  }
 }
