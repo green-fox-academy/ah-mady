@@ -24,8 +24,16 @@ public class Carrier {
     this.aircraftsList.add(aircrafts);
   }
 
+  public int getTotalDamage() {
+    int totalDamage =0;
+    for (Aircrafts aircrafts: aircraftsList) {
+      totalDamage += aircrafts.getBaseDamage() + aircrafts.getCurrentAmmo();
+    }
+    return totalDamage;
+  }
+
   public void fill() throws Exception {
-    if (this.initialAmmo == 0) {
+    if (this.storedAmmo == 0) {
       throw new Exception("Not enough ammo");
     } else {
 
@@ -48,13 +56,23 @@ public class Carrier {
   public void fight(Carrier carrier){
     int damage1 = 0;
     for (Aircrafts aircraft: this.aircraftsList) {
-      aircraft.fight();
       damage1 = damage1 + aircraft.fight();
     }
+    carrier.healthPoints -= damage1;
     //DECREASE THE AMMO - PENDING
     System.out.println(carrier.healthPoints);
   }
-
+  public String status() {
+    if (this.healthPoints <= 0) {
+      return "It's dead Jim";
+    }
+    String report = "HP: " + this.healthPoints + " Aircraft count: " + aircraftsList.size() + "Ammo storage: " + this.storedAmmo + "Total damage: " + getTotalDamage() +
+        System.lineSeparator() + "Aircrafts:";
+    for (Aircrafts aircrafts : aircraftsList) {
+      report += System.lineSeparator() + aircrafts.getStatus();
+    }
+    return report;
+  }
 
 }
 

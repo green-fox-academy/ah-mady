@@ -36,7 +36,7 @@ public class Aircrafts {
   public int fight(){
 
     this.totalDamage = this.baseDamage * this.currentAmmo;
-    //this.currentAmmo = 0;
+    this.currentAmmo = 0;
     return this.totalDamage;
   }
 
