@@ -4,9 +4,10 @@ public class Aircrafts {
 
   private int maxAmmo;
   private int baseDamage;
-  private int currentAmmo;
+  private int currentAmmo = 0;
   private String type;
   protected int totalDamage;
+
 
   public int getMaxAmmo() {
     return maxAmmo;
@@ -39,9 +40,6 @@ public class Aircrafts {
     return this.totalDamage;
   }
 
-  public int afterFight(){
-    
-  }
 
   public int refill(int refillAmount){
     if (refillAmount <= this.maxAmmo){
