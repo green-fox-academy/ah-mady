@@ -21,10 +21,10 @@ public class Plant {
   }
 
   public boolean doesItNeedWater(){
-    if (water > 0){
-      return false;
-    }else{
+    if (water < 0){
       return true;
+    }else{
+      return false;
     }
   }
 }

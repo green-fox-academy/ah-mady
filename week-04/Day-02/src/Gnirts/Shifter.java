@@ -1,3 +1,5 @@
+package Gnirts;
+
 public class Shifter implements CharSequence {
 
   String someString;

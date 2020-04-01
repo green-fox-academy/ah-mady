@@ -25,8 +25,10 @@ public class TelephoneBook {
 
         //Do we know Chris E. Myers' phone number?
         for (String newKey : telephoneBook.values()) {
-            if (telephoneBook.containsValue("Brooke P. Askew")) {
-                System.out.println(telephoneBook.get("Brooke P. Askew"));
+            if (telephoneBook.containsValue(newKey)) {
+                System.out.println(telephoneBook.get("Chris E. Myers"));
+            }else{
+                System.out.println("Value not found");
             }
 
         }
